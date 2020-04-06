@@ -75,7 +75,7 @@ resource "aws_subnet" "public1" {
 //public subnet 2
 resource "aws_subnet" "public2" {
   vpc_id     = "${aws_vpc.first_vpc.id}"
-  cidr_block = "${var.publicsub1}"
+  cidr_block = "${var.publicsub2}"
   map_public_ip_on_launch = "true"
   availability_zone = "${var.az2}"
   tags = {
