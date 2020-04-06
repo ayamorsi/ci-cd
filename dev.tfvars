@@ -1,6 +1,6 @@
 tag = "ITI_VPC"
 profile="lab1"
-state="dev/terraform.tfstate"
+state="terraform.tfstate"
 region = "us-west-2"
 privatesub1 = "10.0.1.0/24"
 privatesub2 = "10.0.2.0/24"
