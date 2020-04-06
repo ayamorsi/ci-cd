@@ -11,14 +11,14 @@ resource "aws_security_group" "http" {
 }
 
 resource "aws_security_group" "private_ssh" {
-  name        = "private-ssh"
+  name        = "private_ssh"
   vpc_id      = "${aws_vpc.first_vpc.id}"
 
   ingress {
     from_port   = 22
     to_port     = 22
     protocol    = "tcp"
-    cidr_blocks = ["192.168.0.0/16"]
+    cidr_blocks = ["${aws_vpc.first_vpc.cidr_block}"]
   }
 }
 
