@@ -11,9 +11,9 @@ resource "aws_key_pair" "generated_key" {
 }
 
 //to create secret key
-  resource "aws_secretsmanager_secret" "private" {
-  name = "private_key"
-}
+#   resource "aws_secretsmanager_secret" "private" {
+#   name = "private_key"
+# }
 
 //to fill the value 
 # resource "aws_secretsmanager_secret_version" "test_secret" {
