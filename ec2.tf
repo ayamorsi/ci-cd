@@ -4,7 +4,7 @@ resource "aws_instance" "nginx1" {
   key_name = "${aws_key_pair.generated_key.key_name}"
   subnet_id = "${aws_subnet.public1.id}"
   vpc_security_group_ids = ["${aws_security_group.http.id}",
-                            "${aws_security_group.private_ssh.id}",
+                            "${aws_security_group.private_ssh.id}"]
   tags = {
     Name = "nginx_1"
   }
@@ -17,7 +17,7 @@ resource "aws_instance" "nginx2" {
   key_name = "${aws_key_pair.generated_key.key_name}"
   subnet_id = "${aws_subnet.public2.id}"
   vpc_security_group_ids = ["${aws_security_group.http.id}",
-                            "${aws_security_group.private_ssh.id}",
+                            "${aws_security_group.private_ssh.id}"]
   tags = {
     Name = "nginx_2"
   }
