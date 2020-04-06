@@ -3,6 +3,5 @@ terraform {
         bucket = "tflab"
         key    = "${var.state}"
         region = "${var.region}"
-        profile = "lab1"
     }
 }
