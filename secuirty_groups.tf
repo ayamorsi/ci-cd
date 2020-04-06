@@ -1,6 +1,6 @@
 resource "aws_security_group" "http" {
   name        = "http"
-  vpc_id      = "${aws_vpc.main.id}"
+  vpc_id      = "${aws_vpc.first_vpc.id}"
 
   ingress {
     from_port   = 80
@@ -12,7 +12,7 @@ resource "aws_security_group" "http" {
 
 resource "aws_security_group" "private_ssh" {
   name        = "private-ssh"
-  vpc_id      = "${aws_vpc.main.id}"
+  vpc_id      = "${aws_vpc.first_vpc.id}"
 
   ingress {
     from_port   = 22
@@ -24,7 +24,7 @@ resource "aws_security_group" "private_ssh" {
 
 resource "aws_security_group" "ssh" {
   name        = "ssh"
-  vpc_id      = "${aws_vpc.main.id}"
+  vpc_id      = "${aws_vpc.first_vpc.id}"
 
   ingress {
     from_port   = 22
