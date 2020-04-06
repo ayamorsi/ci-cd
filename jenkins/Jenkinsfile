@@ -5,6 +5,11 @@ pipeline {
         AWS_SECRET_ACCESS_KEY = credentials('AWS_SECRET_ACCESS_KEY')
     }
    stages {
+        stage('destroy') {
+            steps {
+                sh 'terraform destroy -var-file="dev.tfvars" -auto-approve'
+            }
+        }
         stage('init') {
             steps {
                 sh 'terraform init -var-file="dev.tfvars"'
