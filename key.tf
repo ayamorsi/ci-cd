@@ -16,10 +16,10 @@ resource "aws_key_pair" "generated_key" {
 }
 
 //to fill the value 
-resource "aws_secretsmanager_secret_version" "test_secret" {
-  secret_id     = "${aws_secretsmanager_secret.private.id}"
-  secret_string = "${tls_private_key.key.private_key_pem}"
-}
+# resource "aws_secretsmanager_secret_version" "test_secret" {
+#   secret_id     = "${aws_secretsmanager_secret.private.id}"
+#   secret_string = "${tls_private_key.key.private_key_pem}"
+# }
 
 //save key in local file 
 resource "local_file" "private_key" {
